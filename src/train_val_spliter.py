@@ -18,5 +18,3 @@ def train_val_spliter(dataset, test_size):
     print(f"validation shape:{val_df.shape}")
     
     return train_df, val_df
-
-train_df, val_df = train_val_spliter(train_df, 0.1)

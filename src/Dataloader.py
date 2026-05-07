@@ -17,10 +17,10 @@ class FaceData(Dataset):
             transforms.ToTensor(),
         ]
         
-
         train_transforms = [
             transforms.Resize((224, 224)),
-            transforms.RandomHorizontalFlip(p=0.5),          
+            transforms.RandomHorizontalFlip(p=0.3),    
+            transforms.RandomVerticalFlip(p=0.),
             transforms.RandomRotation(degrees=15),            
             transforms.ColorJitter(brightness=0.2,           
                                    contrast=0.2, 

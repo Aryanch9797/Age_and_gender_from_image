@@ -1,3 +1,5 @@
+""" This defination is used to split the data into training data and validation data that keeps the equal ration of gender and age distribution"""
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 

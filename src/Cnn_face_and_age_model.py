@@ -1,3 +1,5 @@
+""" Custom Cnn to predict age and gender from images. """
+
 import torch
 import torch.nn as nn
 import pytorch_lightning as pl
@@ -92,6 +94,7 @@ class CNN_face_and_age_model(pl.LightningModule):
             gamma=2.0, 
             reduction='mean'
         )
+        
         loss_a = self.age_loss(age_preds, y_age)
 
         loss = loss_g + loss_a*2
